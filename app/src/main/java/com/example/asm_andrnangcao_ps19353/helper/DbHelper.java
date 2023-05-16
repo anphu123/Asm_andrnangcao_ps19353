@@ -50,6 +50,13 @@ public class DbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+       if(i != i1) {
+           sqLiteDatabase.execSQL("DROP TABLE IF EXISTS NGUOIDUNG");
+           sqLiteDatabase.execSQL("DROP TABLE IF EXISTS MONHOC");
+           sqLiteDatabase.execSQL("DROP TABLE IF EXISTS THONGTIN");
+           sqLiteDatabase.execSQL("DROP TABLE IF EXISTS DANGKY");
+           onCreate(sqLiteDatabase);
+       }
 
     }
 }
