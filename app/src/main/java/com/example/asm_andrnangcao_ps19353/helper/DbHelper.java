@@ -18,7 +18,7 @@ public class DbHelper extends SQLiteOpenHelper {
        sqLiteDatabase.execSQL(dbNguoidung);
 
         //bảng môn học
-       String dbMonHoc="CREATE TABLE MONHOC(code text primary key autoincrement,name text,teacher text)";
+       String dbMonHoc="CREATE TABLE MONHOC(code text primary key ,name text,teacher text)";
        sqLiteDatabase.execSQL(dbMonHoc);
 
        //bảng thông tin
