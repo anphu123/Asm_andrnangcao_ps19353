@@ -18,15 +18,15 @@ public class DbHelper extends SQLiteOpenHelper {
        sqLiteDatabase.execSQL(dbNguoidung);
 
         //bảng môn học
-       String dbMonHoc="CREATE TABLE MonHoc(code text primary key autoincrement,name text,teacher text)";
+       String dbMonHoc="CREATE TABLE MONHOC(code text primary key autoincrement,name text,teacher text)";
        sqLiteDatabase.execSQL(dbMonHoc);
 
        //bảng thông tin
-       String dbThongTin = "CREATE TABLE ThongTin(id integer primary key autoincrement,code text, address text)";
+       String dbThongTin = "CREATE TABLE THONGTIN(id integer primary key autoincrement,code text, address text)";
        sqLiteDatabase.execSQL(dbThongTin);
 
        //bảng đăng kí
-        String dbDangKy = "CREATE TABLE DangKy(id integer, code text)";
+        String dbDangKy = "CREATE TABLE DANGKY(id integer, code text)";
        sqLiteDatabase.execSQL(dbDangKy);
 
 
