@@ -22,7 +22,7 @@ public class DbHelper extends SQLiteOpenHelper {
        sqLiteDatabase.execSQL(dbMonHoc);
 
        //bảng thông tin
-       String dbThongTin = "CREATE TABLE THONGTIN(id integer primary key autoincrement,code text, address text)";
+       String dbThongTin = "CREATE TABLE THONGTIN(id integer primary key autoincrement,code text,date text, address text)";
        sqLiteDatabase.execSQL(dbThongTin);
 
        //bảng đăng kí
