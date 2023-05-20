@@ -17,6 +17,7 @@
         android:textColor="#ffffff"
         android:textStyle="italic" />
     <ImageView
+        android:id="@+id/imgCourse"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="124dp"
@@ -27,6 +28,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView
+        android:id="@+id/imgMap"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="124dp"
@@ -37,6 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView
+        android:id="@+id/imgNews"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="376dp"
@@ -47,6 +50,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView
+        android:id="@+id/imgSocial"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="376dp"
