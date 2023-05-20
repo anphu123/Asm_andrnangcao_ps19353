@@ -26,6 +26,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="false"></activity>
+        <service android:name=".service.KiemTraDangNhapService"/>
     </application>
 
 </manifest>
