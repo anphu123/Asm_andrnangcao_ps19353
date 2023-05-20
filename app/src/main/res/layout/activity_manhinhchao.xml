@@ -14,11 +14,12 @@
         android:layout_width="339dp"
         android:layout_height="635dp"
         android:src="@mipmap/splash" />
+
     <TextView
         android:id="@+id/tvLogo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="HUỲNH MAI AN PHÚ - PS19353 - ASMNANGCAO"
         android:gravity="center"
-        android:textColor="#545454"/>
+        android:text="HUỲNH MAI AN PHÚ - PS19353 - ASMNANGCAO"
+        android:textColor="#545454" />
 </LinearLayout>
