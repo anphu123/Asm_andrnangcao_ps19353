@@ -11,20 +11,23 @@ import java.util.ArrayList;
 
 public class DangKyMonHocDAO {
     private DbHelper dbHelper;
+
     public DangKyMonHocDAO(Context context) {
-        dbHelper= new DbHelper(context);
-        //lấy danh sách môn học
+        dbHelper = new DbHelper(context);
+
 
     }
-    public ArrayList<MonHoc> getDSMonHoc(){
+
+    //lấy danh sách môn học
+    public ArrayList<MonHoc> getDSMonHoc() {
         ArrayList<MonHoc> list = new ArrayList<>();
         SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
-        Cursor cursor =sqLiteDatabase.rawQuery("SELECT * FROM MONHOC",null);
-        if(cursor.getCount() !=0){
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM MONHOC", null);
+        if (cursor.getCount() != 0) {
             cursor.moveToFirst();
-            do{
-                list.add(new MonHoc(cursor.getString(0),cursor.getString(1),cursor.getString(2)));
-            }while (cursor.moveToNext());
+            do {
+                list.add(new MonHoc(cursor.getString(0), cursor.getString(1), cursor.getString(2)));
+            } while (cursor.moveToNext());
         }
         return list;
     }

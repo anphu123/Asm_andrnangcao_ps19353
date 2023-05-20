@@ -18,6 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
         DangKyMonHocDAO dao = new DangKyMonHocDAO(this);
         ArrayList<MonHoc> list = dao.getDSMonHoc();
-        String a="";
+        String a = "";
     }
 }
