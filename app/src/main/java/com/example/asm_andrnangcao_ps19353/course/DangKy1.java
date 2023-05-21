@@ -1,14 +1,16 @@
-package com.example.asm_andrnangcao_ps19353;
+package com.example.asm_andrnangcao_ps19353.course;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class CourseActivity extends AppCompatActivity {
+import com.example.asm_andrnangcao_ps19353.R;
+
+public class DangKy1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_course);
+        setContentView(R.layout.activity_dang_ky1);
     }
 }

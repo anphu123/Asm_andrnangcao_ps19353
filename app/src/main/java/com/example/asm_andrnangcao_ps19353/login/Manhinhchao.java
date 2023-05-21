@@ -1,14 +1,14 @@
-package com.example.asm_andrnangcao_ps19353;
+package com.example.asm_andrnangcao_ps19353.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.example.asm_andrnangcao_ps19353.R;
 
 public class Manhinhchao extends AppCompatActivity {
 

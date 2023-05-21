@@ -1,4 +1,4 @@
-package com.example.asm_andrnangcao_ps19353;
+package com.example.asm_andrnangcao_ps19353.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,11 +14,14 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.asm_andrnangcao_ps19353.R;
+import com.example.asm_andrnangcao_ps19353.home.MainActivity;
 import com.example.asm_andrnangcao_ps19353.service.KiemTraDangNhapService;
 
 public class LoginActivity extends AppCompatActivity {
 
     IntentFilter intentFilter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +56,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
-        registerReceiver(myBroadcast,intentFilter);
+        registerReceiver(myBroadcast, intentFilter);
         super.onResume();
     }
 
@@ -63,11 +66,11 @@ public class LoginActivity extends AppCompatActivity {
             switch (intent.getAction()) {
                 case "kiemTraDangNhap":
                     Bundle bundle = intent.getExtras();
-                    boolean check =bundle.getBoolean("check");
-                    if(check){
+                    boolean check = bundle.getBoolean("check");
+                    if (check) {
                         startActivity(new Intent(LoginActivity.this, MainActivity.class));
                         Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-                    }else{
+                    } else {
                         Toast.makeText(LoginActivity.this, "Đăng nhập không thành công", Toast.LENGTH_SHORT).show();
                     }
                     break;

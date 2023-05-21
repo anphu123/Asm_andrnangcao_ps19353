@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".home.MainActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -61,16 +61,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
-    <TextView
+
+
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="44dp"
-        android:background="#5F9EA0"
-        android:gravity="center"
-        android:textStyle="italic"
-        android:text="HUỲNH MAI AN PHÚ"
-        android:textColor="#ffffff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="16dp" />
+        android:layout_height="wrap_content"
+        android:text="back"
+        android:id="@+id/btnbackmanin"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

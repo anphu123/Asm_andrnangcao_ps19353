@@ -4,13 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CourseActivity">
-    <TextView
+    tools:context=".course.CourseActivity">
+
+    <LinearLayout
+        android:id="@+id/lnCourses"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_margin="5dp"
+        android:background="#B19A9A"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.028"
+        tools:layout_editor_absoluteX="0dp"
+
+        >
+
+        <ImageView
+            android:layout_width="112dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/register" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Đăng kí khóa học"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnCourses1"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_margin="5dp"
+        android:background="#B19A9A"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lnCourses"
+        app:layout_constraintVertical_bias="0.053"
+
+        tools:layout_editor_absoluteX="5dp">
+
+        <ImageView
+            android:layout_width="112dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/courses" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="khóa học đã đăng kí"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnbackcourse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="course"/>
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:text="back"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
