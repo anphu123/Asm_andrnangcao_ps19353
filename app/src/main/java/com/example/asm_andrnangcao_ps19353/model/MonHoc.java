@@ -4,12 +4,28 @@ public class MonHoc {
     private String code;
     private String name;
     private String teacher;
+    private  int isRehidter;
 
 
     public MonHoc(String code, String name, String teacher) {
         this.code = code;
         this.name = name;
         this.teacher = teacher;
+    }
+
+    public MonHoc(String code, String name, String teacher, int isRehidter) {
+        this.code = code;
+        this.name = name;
+        this.teacher = teacher;
+        this.isRehidter = isRehidter;
+    }
+
+    public int getIsRehidter() {
+        return isRehidter;
+    }
+
+    public void setIsRehidter(int isRehidter) {
+        this.isRehidter = isRehidter;
     }
 
     public String getCode() {
