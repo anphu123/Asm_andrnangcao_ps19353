@@ -55,7 +55,7 @@ public class DangKy extends AppCompatActivity {
             switch (intent.getAction()) {
                 case "DSMonHoc":
                     Bundle bundle=intent.getExtras();
-                    ArrayList<MonHoc> list= (ArrayList<MonHoc>) bundle.getSerializable("list");
+                    list= (ArrayList<MonHoc>) bundle.getSerializable("list");
 
                     break;
             }
