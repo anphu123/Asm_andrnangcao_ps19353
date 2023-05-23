@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.LinearLayout;
@@ -23,12 +24,15 @@ public class DangKy extends AppCompatActivity {
     RecyclerView rcvdangky;
     int id;
     ArrayList<MonHoc> list;
+    IntentFilter intentFilter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dang_ky);
 
         RecyclerView rcvdangky= (RecyclerView) findViewById(R.id.rcvdangky);
+        intentFilter = new IntentFilter();
+        intentFilter.addAction("DSMonHoc");
 
         //id nguoi dung dang nhap
         SharedPreferences sharedPreferences=getSharedPreferences("THONGTIN",MODE_PRIVATE);
@@ -45,7 +49,7 @@ public class DangKy extends AppCompatActivity {
     private void loadDaTa(){
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
         rcvdangky.setLayoutManager(linearLayoutManager);
-        DangKyMonHocAdapter adapter= new DangKyMonHocAdapter(this,)
+        DangKyMonHocAdapter adapter= new DangKyMonHocAdapter(this,list);
     }
     private BroadcastReceiver myBroadcast = new BroadcastReceiver() {
 
@@ -56,7 +60,7 @@ public class DangKy extends AppCompatActivity {
                 case "DSMonHoc":
                     Bundle bundle=intent.getExtras();
                     list= (ArrayList<MonHoc>) bundle.getSerializable("list");
-
+                    loadDaTa();
                     break;
             }
 
