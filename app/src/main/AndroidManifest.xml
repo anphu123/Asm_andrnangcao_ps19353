@@ -46,6 +46,7 @@
             android:exported="false" />
 
         <service android:name=".service.KiemTraDangNhapService" />
+        <service android:name=".service.DangKyMonHocService" />
     </application>
 
 </manifest>

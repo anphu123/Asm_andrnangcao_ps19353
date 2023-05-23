@@ -1,6 +1,8 @@
 package com.example.asm_andrnangcao_ps19353.model;
 
-public class MonHoc {
+import java.io.Serializable;
+
+public class MonHoc implements Serializable {
     private String code;
     private String name;
     private String teacher;

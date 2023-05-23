@@ -47,7 +47,7 @@
                    android:textStyle="bold" />
 
                <TextView
-                   android:id="@+id/txtTecher"
+                   android:id="@+id/txtTeacher"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:text=""
@@ -61,6 +61,7 @@
                    android:textSize="20dp"
                    android:textStyle="bold" />
                <Button
+                   android:id="@+id/btnStatus"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"/>
            </LinearLayout>
