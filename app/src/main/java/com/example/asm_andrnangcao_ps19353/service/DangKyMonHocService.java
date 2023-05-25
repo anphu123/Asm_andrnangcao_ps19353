@@ -19,15 +19,15 @@ public class DangKyMonHocService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 
-        Bundle bundle=intent.getExtras();
-        int id=bundle.getInt("id");
+        Bundle bundle = intent.getExtras();
+        int id = bundle.getInt("id");
 
-        DangKyMonHocDAO dangKyMonHocDAO=new DangKyMonHocDAO(this);
-        ArrayList<MonHoc> list=dangKyMonHocDAO.getDSMonHoc(id);
+        DangKyMonHocDAO dangKyMonHocDAO = new DangKyMonHocDAO(this);
+        ArrayList<MonHoc> list = dangKyMonHocDAO.getDSMonHoc(id);
 
-        Intent intentBR=new Intent();
-        Bundle bundleBR=new Bundle();
-        bundleBR.putSerializable("list",list);
+        Intent intentBR = new Intent();
+        Bundle bundleBR = new Bundle();
+        bundleBR.putSerializable("list", list);
         intentBR.putExtras(bundleBR);
         intentBR.setAction("DSMonHoc");
         sendBroadcast(intentBR);

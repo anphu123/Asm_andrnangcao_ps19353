@@ -1,4 +1,5 @@
 package com.example.asm_andrnangcao_ps19353.service;
+
 import android.app.Service;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,16 +15,16 @@ public class KiemTraDangNhapService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
 
         Bundle bundle = intent.getExtras();
-        String user =bundle.getString("user");
-        String pass =bundle.getString("pass");
+        String user = bundle.getString("user");
+        String pass = bundle.getString("pass");
 
-        NguoiDungDAO nguoiDungDAO=new NguoiDungDAO(this);
-        boolean check=nguoiDungDAO.kiemTraDangNhap(user,pass);
+        NguoiDungDAO nguoiDungDAO = new NguoiDungDAO(this);
+        boolean check = nguoiDungDAO.kiemTraDangNhap(user, pass);
 
         //gửi data
         Intent intentBR = new Intent();
-        Bundle bundleBR= new Bundle();
-        bundleBR.putBoolean("check",check);
+        Bundle bundleBR = new Bundle();
+        bundleBR.putBoolean("check", check);
         intentBR.putExtras(bundleBR);
         intentBR.setAction("kiemTraDangNhap");
         sendBroadcast(intentBR);

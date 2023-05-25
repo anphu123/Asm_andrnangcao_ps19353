@@ -30,7 +30,7 @@ public class DangKy extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dang_ky);
 
-        RecyclerView rcvdangky= (RecyclerView) findViewById(R.id.rcvdangky);
+         rcvdangky= (RecyclerView) findViewById(R.id.rcvdangky);
         intentFilter = new IntentFilter();
         intentFilter.addAction("DSMonHoc");
 
@@ -63,6 +63,7 @@ public class DangKy extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
         rcvdangky.setLayoutManager(linearLayoutManager);
         DangKyMonHocAdapter adapter= new DangKyMonHocAdapter(this,list);
+        rcvdangky.setAdapter(adapter);
     }
     private BroadcastReceiver myBroadcast = new BroadcastReceiver() {
 

@@ -30,7 +30,7 @@ public class DangKyMonHocAdapter extends RecyclerView.Adapter<DangKyMonHocAdapte
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        LayoutInflater inflater = ((Activity)context).getLayoutInflater();
+        LayoutInflater inflater = ((Activity) context).getLayoutInflater();
         View view = inflater.inflate(R.layout.item_dangky, parent, false);
 
         return new ViewHolder(view);
@@ -51,10 +51,11 @@ public class DangKyMonHocAdapter extends RecyclerView.Adapter<DangKyMonHocAdapte
         return list.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView txtCode,txtName,txtTeacher;
+        TextView txtCode, txtName, txtTeacher;
         Button btnStatus;
+
         public ViewHolder(@NonNull View itemView) {
 
             super(itemView);
