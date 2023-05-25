@@ -46,6 +46,19 @@ public class DangKy extends AppCompatActivity {
 
         startService(intent);
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        registerReceiver(myBroadcast,intentFilter);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unregisterReceiver(myBroadcast);
+    }
+
     private void loadDaTa(){
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
         rcvdangky.setLayoutManager(linearLayoutManager);

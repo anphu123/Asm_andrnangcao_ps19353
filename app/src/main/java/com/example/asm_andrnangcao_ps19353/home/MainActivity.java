@@ -23,15 +23,9 @@ public class MainActivity extends AppCompatActivity {
         ImageView imgMap = (ImageView) findViewById(R.id.imgMap);
         ImageView imgNews = (ImageView) findViewById(R.id.imgNews);
         ImageView imgSocial = (ImageView) findViewById(R.id.imgSocial);
-        Button btnbackmain = (Button) findViewById(R.id.btnbackmanin);
 
-        btnbackmain.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(intent);
-            }
-        });
+
+
 
         imgMap.setOnClickListener(new View.OnClickListener() {
             @Override
