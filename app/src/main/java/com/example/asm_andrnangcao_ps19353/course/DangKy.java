@@ -61,6 +61,7 @@ public class DangKy extends AppCompatActivity {
 
     private void loadDaTa(){
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
+
         rcvdangky.setLayoutManager(linearLayoutManager);
         DangKyMonHocAdapter adapter= new DangKyMonHocAdapter(this,list);
         rcvdangky.setAdapter(adapter);

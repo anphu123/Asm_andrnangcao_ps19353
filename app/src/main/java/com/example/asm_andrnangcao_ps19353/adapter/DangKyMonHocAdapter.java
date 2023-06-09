@@ -2,6 +2,7 @@ package com.example.asm_andrnangcao_ps19353.adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,7 +44,15 @@ public class DangKyMonHocAdapter extends RecyclerView.Adapter<DangKyMonHocAdapte
         holder.txtName.setText(list.get(position).getName());
         holder.txtTeacher.setText(list.get(position).getTeacher());
 
-
+        if(list.get(position).getIsRehidter()>0){
+            holder.btnDangky.setText("hủy đăng k môn học");
+            holder.btnDangky.setBackgroundColor(Color.RED);
+            holder.btnDangky.setTextColor(Color.WHITE);
+        }else {
+            holder.btnDangky.setText("dang ký môn học thành công");
+            holder.btnDangky.setBackgroundColor(Color.BLUE);
+            holder.btnDangky.setTextColor(Color.WHITE);
+        }
     }
 
     @Override
@@ -54,7 +63,7 @@ public class DangKyMonHocAdapter extends RecyclerView.Adapter<DangKyMonHocAdapte
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView txtCode, txtName, txtTeacher;
-        Button btnStatus;
+        Button btnDangky;
 
         public ViewHolder(@NonNull View itemView) {
 
@@ -62,11 +71,11 @@ public class DangKyMonHocAdapter extends RecyclerView.Adapter<DangKyMonHocAdapte
             txtCode = itemView.findViewById(R.id.txtCode);
             txtName = itemView.findViewById(R.id.txtName);
             txtTeacher = itemView.findViewById(R.id.txtTeacher);
-            btnStatus = itemView.findViewById(R.id.btnStatus);
+            btnDangky = itemView.findViewById(R.id.btnDangky);
         }
     }
-    private void showDialog(ArrayList<ThongTin>){
-
-    }
+    //   private  void showDialog(ArrayList<Thongtin>){
+    //
+    //   }
 
 }
