@@ -63,7 +63,7 @@ public class DangKy extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
 
         rcvdangky.setLayoutManager(linearLayoutManager);
-        DangKyMonHocAdapter adapter= new DangKyMonHocAdapter(this,list);
+        DangKyMonHocAdapter adapter= new DangKyMonHocAdapter(this,list,id);
         rcvdangky.setAdapter(adapter);
     }
     private BroadcastReceiver myBroadcast = new BroadcastReceiver() {

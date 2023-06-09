@@ -21,10 +21,12 @@ public class DangKyMonHocAdapter extends RecyclerView.Adapter<DangKyMonHocAdapte
 
     private Context context;
     private ArrayList<MonHoc> list;
+    private int id;
 
-    public DangKyMonHocAdapter(Context context, ArrayList<MonHoc> list) {
+    public DangKyMonHocAdapter(Context context, ArrayList<MonHoc> list, int id) {
         this.context = context;
         this.list = list;
+        this.id= this.id;
     }
 
     @NonNull
@@ -44,15 +46,21 @@ public class DangKyMonHocAdapter extends RecyclerView.Adapter<DangKyMonHocAdapte
         holder.txtName.setText(list.get(position).getName());
         holder.txtTeacher.setText(list.get(position).getTeacher());
 
-        if(list.get(position).getIsRehidter()>0){
-            holder.btnDangky.setText("hủy đăng k môn học");
+        if(list.get(position).getIsRehidter() == id){
+            holder.btnDangky.setText("hủy đăng ký môn học");
             holder.btnDangky.setBackgroundColor(Color.RED);
             holder.btnDangky.setTextColor(Color.WHITE);
         }else {
-            holder.btnDangky.setText("dang ký môn học thành công");
+            holder.btnDangky.setText("dang ký thành công");
             holder.btnDangky.setBackgroundColor(Color.BLUE);
             holder.btnDangky.setTextColor(Color.WHITE);
         }
+        holder.btnDangky.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                
+            }
+        });
     }
 
     @Override

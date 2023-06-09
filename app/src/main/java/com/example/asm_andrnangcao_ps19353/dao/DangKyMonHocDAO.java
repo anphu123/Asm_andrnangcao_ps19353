@@ -1,5 +1,6 @@
 package com.example.asm_andrnangcao_ps19353.dao;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -23,7 +24,7 @@ public class DangKyMonHocDAO {
         ArrayList<MonHoc> list = new ArrayList<>();
 
         SQLiteDatabase sqLiteDatabase = dbHelper.getReadableDatabase();
-        Cursor cursor = sqLiteDatabase.rawQuery("SELECT mh.code,mh.name,mh.teacher,dk.id FROM MONHOC mh LEFT JOIN DANGKY dk ON mh.code = dk.code AND dk.code=?", new String[]{String.valueOf(id)});
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT mh.code,mh.name,mh.teacher,dk.id FROM MONHOC mh LEFT JOIN DANGKY dk ON mh.code = dk.code AND dk.id=?", new String[]{String.valueOf(id)});
         if (cursor.getCount() != 0) {
             cursor.moveToFirst();
             do {
@@ -31,6 +32,26 @@ public class DangKyMonHocDAO {
             } while (cursor.moveToNext());
         }
         return list;
+    }
+
+    //dang ky mon hoc
+    public boolean dangKyMonHoc(int id, String code) {
+        SQLiteDatabase sqLiteDatabase = dbHelper.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("id", id);
+        contentValues.put("code", code);
+        long check = sqLiteDatabase.insert("DANGKY", null, contentValues);
+        if (check == -1)
+            return false;
+        return true;
+    }
+
+    public boolean huyDangKyMonHoc(int id, String code) {
+        SQLiteDatabase sqLiteDatabase = dbHelper.getWritableDatabase();
+        long check = sqLiteDatabase.delete("DANGKY", "id=? and code=?", new String[]{String.valueOf(id), code});
+        if(check == -1)
+            return false;
+        return true;
     }
 
 }
