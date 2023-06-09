@@ -2,7 +2,9 @@ package com.example.asm_andrnangcao_ps19353.adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.asm_andrnangcao_ps19353.R;
 import com.example.asm_andrnangcao_ps19353.model.MonHoc;
+import com.example.asm_andrnangcao_ps19353.service.DKMonHocService;
 
 import java.util.ArrayList;
 
@@ -58,7 +61,11 @@ public class DangKyMonHocAdapter extends RecyclerView.Adapter<DangKyMonHocAdapte
         holder.btnDangky.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                
+                Intent intent = new Intent(context, DKMonHocService.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("id",id);
+                bundle.putString("code",list.get(holder.getAdapterPosition()).getCode());
+
             }
         });
     }
