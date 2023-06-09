@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="10dp"
-    app:cardCornerRadius="35dp">
+    app:cardCornerRadius="37dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,8 +15,7 @@
         <LinearLayout
             android:id="@+id/lnCourses"
             android:layout_width="match_parent"
-            android:layout_height="130dp"
-            android:layout_margin="5dp"
+            android:layout_height="match_parent"
             android:background="#B19A9A"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -62,6 +61,7 @@
                    android:textStyle="bold" />
                <Button
                    android:id="@+id/btnStatus"
+                   android:layout_marginEnd="10dp"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"/>
            </LinearLayout>

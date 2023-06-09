@@ -65,5 +65,8 @@ public class DangKyMonHocAdapter extends RecyclerView.Adapter<DangKyMonHocAdapte
             btnStatus = itemView.findViewById(R.id.btnStatus);
         }
     }
+    private void showDialog(ArrayList<ThongTin>){
+
+    }
 
 }
